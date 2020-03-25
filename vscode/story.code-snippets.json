@@ -1,0 +1,19 @@
+{
+  "Create a story": {
+    "scope": "javascript, typescript",
+    "prefix": "story",
+    "body": [
+      "import React from 'react'",
+      "import ${TM_FILENAME_BASE/(.*)\\..+$/$1/} from '.'",
+      "",
+      "export default {",
+      "\ttitle: '${2:My Story}',",
+      "\tcomponent: ${TM_FILENAME_BASE/(.*)\\..+$/$1/}",
+      "}",
+      "",
+      "export const ${TM_FILENAME_BASE/(.*)\\..+$/Story$1/} = () => <${TM_FILENAME_BASE/(.*)\\..+$/$1/} />",
+      ""
+    ],
+    "description": "Creates a new Story based on the storybook"
+  }
+}
